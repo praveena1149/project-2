@@ -22,10 +22,11 @@ except Exception as e:
 engine=create_engine("mysql+pymysql://root:12345@localhost/project2")
 
 df.to_sql(
-    name='fooddelivery',        # table name
+    name='analysis',        # table name
     con=engine,
     if_exists='append',     # insert data (no overwrite)
     index=False             # avoid DataFrame index column
 )
 
 print('data inserted sucessfully')
+
